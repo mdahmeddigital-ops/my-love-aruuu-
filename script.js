@@ -256,3 +256,139 @@ page3.classList.add("active");
 });
 
 }
+
+
+
+
+/* ==========================================
+   PART 5.2
+   Magical Love Tree Interaction
+========================================== */
+
+
+/* Tree Heart Falling Effect */
+
+const treeWorld = document.querySelector(".treeWorld");
+
+
+function createTreeHeart(){
+
+if(!treeWorld) return;
+
+
+const heart = document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.className="treeHeart";
+
+
+heart.style.left =
+Math.random()*100+"%";
+
+
+heart.style.animationDuration =
+(4 + Math.random()*4)+"s";
+
+
+heart.style.fontSize =
+(15 + Math.random()*25)+"px";
+
+
+treeWorld.appendChild(heart);
+
+
+setTimeout(()=>{
+
+heart.remove();
+
+},8000);
+
+
+}
+
+
+setInterval(createTreeHeart,700);
+
+
+
+/* Firefly Extra Movement */
+
+const fireflies =
+document.querySelectorAll(".fireflies span");
+
+
+fireflies.forEach((fly)=>{
+
+
+setInterval(()=>{
+
+
+fly.style.transform =
+
+`translate(${Math.random()*60-30}px,
+${Math.random()*60-30}px)`;
+
+
+},1500);
+
+
+});
+
+
+
+/* Tree Button */
+
+const treeNextBtn =
+document.getElementById("treeNextBtn");
+
+
+if(treeNextBtn){
+
+
+treeNextBtn.addEventListener("click",()=>{
+
+
+treeNextBtn.style.transform="scale(.9)";
+
+
+setTimeout(()=>{
+
+treeNextBtn.style.transform="scale(1)";
+
+
+},300);
+
+
+
+const page3 =
+document.getElementById("page3");
+
+
+const page4 =
+document.getElementById("page4");
+
+
+
+if(page3 && page4){
+
+
+page3.classList.remove("active");
+
+
+setTimeout(()=>{
+
+
+page4.classList.add("active");
+
+
+},900);
+
+
+}
+
+
+});
+
+
+}

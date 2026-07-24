@@ -720,3 +720,86 @@ btn.style.transform="scale(1)";
 
 
 });
+
+
+
+/* ==========================================
+   PART 8.5
+   Petal Effect Activation
+========================================== */
+
+
+const petalContainer =
+document.getElementById("petalContainer");
+
+
+function createPetal(){
+
+if(!petalContainer) return;
+
+
+const petal =
+document.createElement("div");
+
+
+petal.className="petal";
+
+petal.innerHTML="🌸";
+
+
+petal.style.left =
+Math.random()*100+"vw";
+
+
+petal.style.fontSize =
+(15 + Math.random()*20)+"px";
+
+
+petal.style.animationDuration =
+(5 + Math.random()*5)+"s";
+
+
+petalContainer.appendChild(petal);
+
+
+
+setTimeout(()=>{
+
+petal.remove();
+
+},10000);
+
+
+}
+
+
+/* Create petals */
+
+setInterval(createPetal,700);
+
+
+
+/* Extra sparkle pulse */
+
+const sparkles =
+document.querySelectorAll("#sparkleContainer span");
+
+
+sparkles.forEach((sparkle)=>{
+
+
+sparkle.addEventListener("click",()=>{
+
+sparkle.style.transform="scale(3)";
+
+setTimeout(()=>{
+
+sparkle.style.transform="scale(1)";
+
+},500);
+
+
+});
+
+
+});

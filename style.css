@@ -119,3 +119,98 @@ box-shadow:0 0 15px hotpink;
 opacity:0;
 
 }
+
+
+
+
+/* ==========================================
+   PART 2.3
+   Heart Crack Animation
+========================================== */
+
+@keyframes crackShow{
+
+0%{
+
+opacity:0;
+transform:translate(-50%,-50%) scale(.2) rotate(0deg);
+
+}
+
+50%{
+
+opacity:1;
+transform:translate(-50%,-50%) scale(1.1) rotate(10deg);
+
+}
+
+100%{
+
+opacity:0;
+transform:translate(-50%,-50%) scale(1.4) rotate(-10deg);
+
+}
+
+}
+
+.crackActive{
+
+animation:crackShow .8s ease forwards;
+
+}
+
+/* Ripple */
+
+@keyframes ripple{
+
+0%{
+
+opacity:.8;
+
+transform:translate(-50%,-50%) scale(0);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translate(-50%,-50%) scale(18);
+
+}
+
+}
+
+.rippleActive{
+
+animation:ripple .8s ease forwards;
+
+}
+
+/* Explosion */
+
+@keyframes particleBlast{
+
+0%{
+
+opacity:1;
+
+transform:translate(0,0) scale(.4);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translate(var(--x),var(--y)) scale(1.8);
+
+}
+
+}
+
+.explode{
+
+animation:particleBlast .9s ease-out forwards;
+
+}

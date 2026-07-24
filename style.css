@@ -2032,3 +2032,189 @@ font-size:14px;
 
 
 }
+
+
+
+/* ==========================================
+   PART 8.4
+   Sparkle + Petal Effects
+========================================== */
+
+
+/* Sparkle Container */
+
+#sparkleContainer{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:50;
+
+}
+
+
+#sparkleContainer span{
+
+position:absolute;
+
+width:6px;
+
+height:6px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 15px white,
+
+0 0 30px #ff8ac0;
+
+animation:sparkleMove 4s infinite;
+
+}
+
+
+/* Sparkle Positions */
+
+#sparkleContainer span:nth-child(1){
+left:10%;
+top:20%;
+}
+
+#sparkleContainer span:nth-child(2){
+left:25%;
+top:70%;
+animation-delay:1s;
+}
+
+#sparkleContainer span:nth-child(3){
+left:45%;
+top:30%;
+animation-delay:2s;
+}
+
+#sparkleContainer span:nth-child(4){
+left:70%;
+top:60%;
+animation-delay:.5s;
+}
+
+#sparkleContainer span:nth-child(5){
+left:85%;
+top:25%;
+animation-delay:1.5s;
+}
+
+#sparkleContainer span:nth-child(6){
+left:60%;
+top:15%;
+animation-delay:2.5s;
+}
+
+#sparkleContainer span:nth-child(7){
+left:35%;
+top:50%;
+animation-delay:3s;
+}
+
+#sparkleContainer span:nth-child(8){
+left:90%;
+top:75%;
+animation-delay:2s;
+}
+
+
+@keyframes sparkleMove{
+
+0%,100%{
+
+opacity:0;
+
+transform:scale(.5);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1.8);
+
+}
+
+}
+
+
+
+/* Petal Container */
+
+#petalContainer{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:40;
+
+}
+
+
+/* Falling Petal */
+
+.petal{
+
+position:absolute;
+
+top:-50px;
+
+font-size:25px;
+
+animation:petalFall linear forwards;
+
+}
+
+
+@keyframes petalFall{
+
+0%{
+
+transform:
+
+translateY(-50px)
+
+rotate(0deg);
+
+opacity:0;
+
+}
+
+
+20%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:
+
+translateY(110vh)
+
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}

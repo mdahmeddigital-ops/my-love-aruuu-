@@ -1906,3 +1906,129 @@ font-size:15px;
 }
 
 }
+
+
+
+
+/* ==========================================
+   PART 8.2
+   Mobile Premium Optimization
+========================================== */
+
+
+/* Prevent Selection */
+
+body{
+
+-webkit-user-select:none;
+
+user-select:none;
+
+}
+
+
+/* Better Touch */
+
+button{
+
+-webkit-tap-highlight-color:transparent;
+
+}
+
+
+/* Mobile Smooth Animation */
+
+@media(max-width:600px){
+
+
+.loveWorld,
+.treeWorld,
+.letterWorld,
+.finalWorld{
+
+transform:translateZ(0);
+
+backface-visibility:hidden;
+
+}
+
+
+.background,
+.aurora,
+.finalAurora,
+.treeGlow{
+
+animation-duration:6s;
+
+}
+
+
+
+/* Text Adjustment */
+
+
+h1{
+
+line-height:1.2;
+
+}
+
+
+p{
+
+font-size:14px;
+
+}
+
+
+
+/* Buttons */
+
+button{
+
+min-height:48px;
+
+padding-left:28px;
+
+padding-right:28px;
+
+}
+
+
+
+/* Heart Size */
+
+#mainHeart{
+
+font-size:90px;
+
+}
+
+
+
+}
+
+
+
+/* Small Phone */
+
+@media(max-width:380px){
+
+
+.loveWorldText h1,
+.treeMessage h1,
+.finalMessage h1{
+
+font-size:34px;
+
+}
+
+
+button{
+
+font-size:14px;
+
+}
+
+
+}

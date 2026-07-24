@@ -516,3 +516,97 @@ page5.classList.add("active");
 
 
 }
+
+
+
+
+/* ==========================================
+   PART 7.2
+   Final Love Scene Interaction
+========================================== */
+
+
+/* Final Heart Rain */
+
+const finalHearts =
+document.getElementById("finalHearts");
+
+
+function createFinalHeart(){
+
+if(!finalHearts) return;
+
+
+const heart =
+document.createElement("div");
+
+
+heart.innerHTML="❤️";
+
+heart.className="finalHeartRain";
+
+
+heart.style.left =
+Math.random()*100+"vw";
+
+
+heart.style.animationDuration =
+(4+Math.random()*5)+"s";
+
+
+heart.style.fontSize =
+(15+Math.random()*30)+"px";
+
+
+finalHearts.appendChild(heart);
+
+
+
+setTimeout(()=>{
+
+heart.remove();
+
+},9000);
+
+
+}
+
+
+setInterval(createFinalHeart,350);
+
+
+
+
+/* Restart Button */
+
+const restartLove =
+document.getElementById("restartLove");
+
+
+
+if(restartLove){
+
+
+restartLove.addEventListener("click",()=>{
+
+
+restartLove.style.transform="scale(.9)";
+
+
+setTimeout(()=>{
+
+
+restartLove.style.transform="scale(1)";
+
+
+},300);
+
+
+
+location.reload();
+
+
+});
+
+
+}

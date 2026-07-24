@@ -1660,3 +1660,62 @@ font-size:18px;
 }
 
 }
+
+
+
+/* Final Heart Rain */
+
+.finalHeartRain{
+
+position:fixed;
+
+top:-50px;
+
+color:#ff2d75;
+
+filter:
+
+drop-shadow(0 0 12px hotpink);
+
+animation:finalHeartFall linear forwards;
+
+z-index:20;
+
+}
+
+
+@keyframes finalHeartFall{
+
+0%{
+
+transform:
+
+translateY(-50px)
+
+rotate(0deg);
+
+opacity:0;
+
+}
+
+
+20%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:
+
+translateY(110vh)
+
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}

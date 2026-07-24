@@ -610,3 +610,113 @@ location.reload();
 
 
 }
+
+
+
+
+/* ==========================================
+   PART 8.1
+   Final Script Fix
+========================================== */
+
+
+/* Loading Screen */
+
+window.addEventListener("load",()=>{
+
+
+const loading =
+document.getElementById("loading");
+
+
+if(loading){
+
+
+setTimeout(()=>{
+
+
+loading.style.opacity="0";
+
+
+setTimeout(()=>{
+
+
+loading.style.display="none";
+
+
+},1000);
+
+
+},2000);
+
+
+}
+
+});
+
+
+
+/* Page Helper Function */
+
+
+function openPage(from,to){
+
+
+const oldPage =
+document.getElementById(from);
+
+
+const newPage =
+document.getElementById(to);
+
+
+
+if(oldPage && newPage){
+
+
+oldPage.classList.remove("active");
+
+
+
+setTimeout(()=>{
+
+
+newPage.classList.add("active");
+
+
+},800);
+
+
+}
+
+
+}
+
+
+
+/* Smooth Button Touch */
+
+
+document.querySelectorAll("button")
+.forEach(btn=>{
+
+
+btn.addEventListener("touchstart",()=>{
+
+
+btn.style.transform="scale(.9)";
+
+
+});
+
+
+btn.addEventListener("touchend",()=>{
+
+
+btn.style.transform="scale(1)";
+
+
+});
+
+
+});

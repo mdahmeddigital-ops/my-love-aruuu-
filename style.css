@@ -1719,3 +1719,190 @@ opacity:0;
 }
 
 }
+
+
+
+/* ==========================================
+   PART 8.0
+   Final Polish
+========================================== */
+
+
+/* Global Smooth */
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+
+html,body{
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+font-family:'Poppins',sans-serif;
+
+color:white;
+
+}
+
+
+/* Pages */
+
+.page{
+
+position:absolute;
+
+inset:0;
+
+display:flex;
+
+opacity:0;
+
+visibility:hidden;
+
+transform:scale(1.05);
+
+transition:
+
+opacity 1s ease,
+
+transform 1s ease;
+
+}
+
+
+.page.active{
+
+opacity:1;
+
+visibility:visible;
+
+transform:scale(1);
+
+}
+
+
+/* Buttons */
+
+button{
+
+transition:
+
+transform .3s ease,
+
+box-shadow .3s ease;
+
+}
+
+
+button:active{
+
+transform:scale(.9);
+
+}
+
+
+/* Touch Effect */
+
+button:hover{
+
+box-shadow:
+
+0 0 35px #ff2d75;
+
+}
+
+
+/* Smooth Rendering */
+
+.loveWorld,
+.treeWorld,
+.letterWorld,
+.finalWorld{
+
+will-change:transform;
+
+}
+
+
+/* Loading */
+
+#loading{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+background:#05010d;
+
+z-index:99999;
+
+transition:1s;
+
+}
+
+
+.loaderHeart{
+
+font-size:80px;
+
+animation:
+
+loaderBeat 1s infinite;
+
+filter:
+
+drop-shadow(0 0 30px #ff2d75);
+
+}
+
+
+@keyframes loaderBeat{
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.page{
+
+width:100vw;
+
+height:100vh;
+
+}
+
+
+button{
+
+font-size:15px;
+
+}
+
+}

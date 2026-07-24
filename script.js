@@ -392,3 +392,127 @@ page4.classList.add("active");
 
 
 }
+
+
+
+/* ==========================================
+   PART 6.2
+   Love Letter Interaction
+========================================== */
+
+
+const envelope = document.getElementById("envelope");
+
+const loveLetter = document.getElementById("loveLetter");
+
+const typingText = document.getElementById("typingText");
+
+
+const letterMessage = 
+"Every moment with you is special. ❤️ You are my happiness, my smile, and my dream. I promise to always love you and keep you in my heart forever...";
+
+
+
+function typeWriter(){
+
+let i = 0;
+
+
+function typing(){
+
+if(i < letterMessage.length){
+
+typingText.innerHTML += letterMessage.charAt(i);
+
+i++;
+
+setTimeout(typing,50);
+
+}
+
+}
+
+
+typing();
+
+}
+
+
+
+/* Open Envelope */
+
+if(envelope){
+
+
+envelope.addEventListener("click",()=>{
+
+
+envelope.style.transform="scale(0) rotate(360deg)";
+
+envelope.style.opacity="0";
+
+
+setTimeout(()=>{
+
+
+loveLetter.classList.add("show");
+
+
+typeWriter();
+
+
+},800);
+
+
+
+});
+
+
+}
+
+
+
+/* Continue Button */
+
+const letterBtn =
+document.getElementById("letterBtn");
+
+
+if(letterBtn){
+
+
+letterBtn.addEventListener("click",()=>{
+
+
+const page4 =
+document.getElementById("page4");
+
+
+const page5 =
+document.getElementById("page5");
+
+
+
+if(page4 && page5){
+
+
+page4.classList.remove("active");
+
+
+
+setTimeout(()=>{
+
+
+page5.classList.add("active");
+
+
+},900);
+
+
+}
+
+
+});
+
+
+}

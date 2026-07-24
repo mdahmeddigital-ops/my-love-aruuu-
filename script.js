@@ -65,3 +65,84 @@ heart.remove();
 setInterval(createHeart,350);
 
 });
+
+
+
+
+/* ==========================================
+   PART 3.2
+   Start Button + Premium Intro
+========================================== */
+
+const startBtn = document.getElementById("startBtn");
+const errorHeart = document.getElementById("errorHeart");
+
+const whiteFlash = document.getElementById("whiteFlash");
+const screenFade = document.getElementById("screenFade");
+const transitionLayer = document.getElementById("transitionLayer");
+
+if(startBtn){
+
+startBtn.addEventListener("click",()=>{
+
+startBtn.style.pointerEvents="none";
+
+startBtn.style.transform="scale(.92)";
+
+errorHeart.style.transition=".5s";
+
+errorHeart.style.transform="scale(1.35)";
+
+setTimeout(()=>{
+
+errorHeart.style.transform="scale(.85) rotate(-8deg)";
+
+},350);
+
+setTimeout(()=>{
+
+errorHeart.style.transform="scale(1.4) rotate(8deg)";
+
+},700);
+
+setTimeout(()=>{
+
+if(whiteFlash){
+
+whiteFlash.style.opacity="1";
+
+}
+
+},1200);
+
+setTimeout(()=>{
+
+if(whiteFlash){
+
+whiteFlash.style.opacity="0";
+
+}
+
+if(screenFade){
+
+screenFade.style.opacity="1";
+
+}
+
+},1650);
+
+setTimeout(()=>{
+
+if(transitionLayer){
+
+transitionLayer.style.opacity="1";
+
+transitionLayer.style.visibility="visible";
+
+}
+
+},2300);
+
+});
+
+}

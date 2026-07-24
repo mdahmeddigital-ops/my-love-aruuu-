@@ -414,3 +414,217 @@ box-shadow:
 transform:scale(.95);
 
 }
+
+
+
+
+/* ===========================================
+   PART 2.3
+   Error Heart + Intro UI
+=========================================== */
+
+/* Error Container */
+
+.error-container{
+
+position:absolute;
+
+top:10%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+z-index:20;
+
+animation:fadeDown 2s ease;
+
+}
+
+/* Main Heart */
+
+.main-heart{
+
+font-size:95px;
+
+filter:
+
+drop-shadow(0 0 20px #ff2d75)
+
+drop-shadow(0 0 45px #ff2d75);
+
+animation:
+
+heartBeat 1.3s infinite;
+
+cursor:pointer;
+
+user-select:none;
+
+}
+
+/* Error Title */
+
+.error-title{
+
+margin-top:18px;
+
+font-size:34px;
+
+font-weight:700;
+
+letter-spacing:4px;
+
+color:#ffffff;
+
+text-shadow:
+
+0 0 12px #ff2d75;
+
+}
+
+/* Error Subtitle */
+
+.error-subtitle{
+
+margin-top:8px;
+
+font-size:17px;
+
+opacity:.85;
+
+letter-spacing:1px;
+
+}
+
+/* Fade */
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+
+transform:
+
+translate(-50%,-80px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translate(-50%,0);
+
+}
+
+}
+
+/* Heart Beat */
+
+@keyframes heartBeat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+25%{
+
+transform:scale(1.15);
+
+}
+
+50%{
+
+transform:scale(.92);
+
+}
+
+75%{
+
+transform:scale(1.18);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* Shine */
+
+.shine{
+
+position:absolute;
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+
+rgba(255,255,255,.35),
+
+transparent 70%);
+
+filter:blur(35px);
+
+top:120px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+animation:shineMove 3s infinite alternate;
+
+pointer-events:none;
+
+}
+
+/* Shine Animation */
+
+@keyframes shineMove{
+
+from{
+
+opacity:.4;
+
+transform:
+
+translateX(-50%)
+
+scale(.9);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateX(-50%)
+
+scale(1.2);
+
+}
+
+}

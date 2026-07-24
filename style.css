@@ -214,3 +214,148 @@ transform:translate(var(--x),var(--y)) scale(1.8);
 animation:particleBlast .9s ease-out forwards;
 
 }
+
+
+
+/* ==========================================
+   PART 3.3
+   Flash + Cinematic Transition Style
+========================================== */
+
+
+/* White Flash */
+
+#whiteFlash{
+
+position:fixed;
+
+inset:0;
+
+background:white;
+
+opacity:0;
+
+pointer-events:none;
+
+z-index:9999;
+
+transition:opacity .5s ease;
+
+}
+
+
+/* Screen Fade */
+
+#screenFade{
+
+position:fixed;
+
+inset:0;
+
+background:#000;
+
+opacity:0;
+
+pointer-events:none;
+
+z-index:9998;
+
+transition:opacity 1s ease;
+
+}
+
+
+/* Transition Screen */
+
+#transitionScreen{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+background:
+
+radial-gradient(circle,
+
+rgba(255,45,117,.25),
+
+#05010d 70%);
+
+opacity:0;
+
+visibility:hidden;
+
+z-index:9997;
+
+transition:1.5s ease;
+
+}
+
+
+/* Transition Text */
+
+#transitionScreen h2{
+
+font-family:'Great Vibes',cursive;
+
+font-size:55px;
+
+color:white;
+
+text-align:center;
+
+text-shadow:
+
+0 0 15px #ff2d75,
+
+0 0 40px #ff2d75;
+
+animation:
+
+textGlow 2s infinite alternate;
+
+}
+
+
+/* Text Glow */
+
+@keyframes textGlow{
+
+from{
+
+filter:drop-shadow(0 0 5px pink);
+
+transform:scale(1);
+
+}
+
+to{
+
+filter:drop-shadow(0 0 25px hotpink);
+
+transform:scale(1.05);
+
+}
+
+}
+
+
+/* Mobile Optimization */
+
+@media(max-width:600px){
+
+#transitionScreen h2{
+
+font-size:38px;
+
+}
+
+}

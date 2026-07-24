@@ -1,1 +1,121 @@
+/* ==========================================
+   PART 2.2
+   Heart Crack + Explosion
+========================================== */
 
+/* Click Ripple */
+
+#clickRipple{
+
+position:absolute;
+
+width:25px;
+
+height:25px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.4);
+
+pointer-events:none;
+
+opacity:0;
+
+transform:translate(-50%,-50%) scale(0);
+
+z-index:999;
+
+}
+
+/* Heart Crack */
+
+#heartCrack{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:180px;
+
+height:180px;
+
+pointer-events:none;
+
+opacity:0;
+
+z-index:30;
+
+}
+
+#heartCrack span{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:3px;
+
+height:80px;
+
+background:linear-gradient(transparent,#ffffff,transparent);
+
+transform-origin:bottom;
+
+box-shadow:0 0 10px white;
+
+}
+
+#heartCrack span:nth-child(1){transform:translate(-50%,-50%) rotate(0deg);}
+#heartCrack span:nth-child(2){transform:translate(-50%,-50%) rotate(45deg);}
+#heartCrack span:nth-child(3){transform:translate(-50%,-50%) rotate(90deg);}
+#heartCrack span:nth-child(4){transform:translate(-50%,-50%) rotate(135deg);}
+#heartCrack span:nth-child(5){transform:translate(-50%,-50%) rotate(180deg);}
+#heartCrack span:nth-child(6){transform:translate(-50%,-50%) rotate(225deg);}
+#heartCrack span:nth-child(7){transform:translate(-50%,-50%) rotate(270deg);}
+#heartCrack span:nth-child(8){transform:translate(-50%,-50%) rotate(315deg);}
+
+/* Explosion */
+
+#explosionParticles{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:1px;
+
+height:1px;
+
+pointer-events:none;
+
+z-index:35;
+
+}
+
+.particle{
+
+position:absolute;
+
+width:10px;
+
+height:10px;
+
+border-radius:50%;
+
+background:#ff2d75;
+
+box-shadow:0 0 15px hotpink;
+
+opacity:0;
+
+}

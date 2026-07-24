@@ -1130,3 +1130,269 @@ opacity:0;
 }
 
 }
+
+
+
+
+/* ==========================================
+   PART 6.1
+   Love Letter Scene Style
+========================================== */
+
+
+/* Letter World */
+
+.letterWorld{
+
+position:relative;
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+overflow:hidden;
+
+background:
+
+radial-gradient(circle at center,
+
+rgba(255,45,117,.25),
+
+transparent 45%),
+
+#05010d;
+
+}
+
+
+/* Glow */
+
+.letterGlow{
+
+position:absolute;
+
+width:500px;
+
+height:500px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+
+rgba(255,105,180,.4),
+
+transparent 70%);
+
+filter:blur(60px);
+
+animation:letterGlowMove 5s infinite alternate;
+
+}
+
+
+@keyframes letterGlowMove{
+
+from{
+
+transform:scale(.8);
+
+opacity:.5;
+
+}
+
+to{
+
+transform:scale(1.2);
+
+opacity:1;
+
+}
+
+}
+
+
+
+/* Envelope */
+
+.envelope{
+
+font-size:120px;
+
+cursor:pointer;
+
+z-index:5;
+
+filter:
+
+drop-shadow(0 0 30px #ff2d75);
+
+animation:envelopeFloat 3s infinite;
+
+}
+
+
+@keyframes envelopeFloat{
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+}
+
+
+
+/* Letter Card */
+
+.loveLetter{
+
+position:absolute;
+
+width:85%;
+
+max-width:500px;
+
+padding:35px;
+
+border-radius:25px;
+
+background:
+
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.2);
+
+text-align:center;
+
+opacity:0;
+
+transform:
+
+translateY(80px)
+
+scale(.8);
+
+transition:1s ease;
+
+z-index:10;
+
+}
+
+
+.loveLetter.show{
+
+opacity:1;
+
+transform:
+
+translateY(0)
+
+scale(1);
+
+}
+
+
+
+/* Title */
+
+.loveLetter h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:55px;
+
+color:white;
+
+text-shadow:
+
+0 0 20px #ff2d75;
+
+}
+
+
+
+/* Text */
+
+#typingText{
+
+margin-top:25px;
+
+font-size:17px;
+
+line-height:1.8;
+
+min-height:100px;
+
+}
+
+
+
+/* Button */
+
+#letterBtn{
+
+margin-top:30px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:50px;
+
+background:
+
+linear-gradient(45deg,#ff2d75,#ff8ab8);
+
+color:white;
+
+font-size:16px;
+
+font-weight:bold;
+
+box-shadow:
+
+0 0 25px #ff2d75;
+
+cursor:pointer;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.envelope{
+
+font-size:90px;
+
+}
+
+
+.loveLetter h1{
+
+font-size:38px;
+
+}
+
+
+.loveLetter{
+
+padding:25px;
+
+}
+
+}

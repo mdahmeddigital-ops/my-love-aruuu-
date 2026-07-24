@@ -679,3 +679,409 @@ font-size:42px;
 }
 
 }
+
+
+
+
+
+/* ==========================================
+   PART 5.1
+   Magical Love Tree Style
+========================================== */
+
+
+/* Tree World */
+
+.treeWorld{
+
+position:relative;
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+overflow:hidden;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#05010d,
+
+#160021
+
+);
+
+}
+
+
+/* Night Sky */
+
+.nightSky{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(circle at top,
+
+rgba(255,255,255,.15),
+
+transparent 35%);
+
+}
+
+
+/* Moon */
+
+.treeMoon{
+
+position:absolute;
+
+top:8%;
+
+right:12%;
+
+font-size:90px;
+
+filter:
+
+drop-shadow(0 0 35px white);
+
+animation:moonMove 4s infinite ease-in-out;
+
+}
+
+
+@keyframes moonMove{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+
+/* Tree */
+
+.loveTree{
+
+position:relative;
+
+width:300px;
+
+height:350px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:5;
+
+}
+
+
+/* Tree Crown */
+
+.treeTop{
+
+position:absolute;
+
+top:0;
+
+width:260px;
+
+height:200px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+
+#ff4d9d,
+
+#8b0055);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+font-size:35px;
+
+padding:20px;
+
+box-shadow:
+
+0 0 50px #ff2d75;
+
+animation:treeGlow 3s infinite alternate;
+
+}
+
+
+/* Tree Trunk */
+
+.treeTrunk{
+
+position:absolute;
+
+bottom:0;
+
+width:70px;
+
+height:170px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#4b230c,
+
+#9b541d,
+
+#4b230c
+
+);
+
+border-radius:30px;
+
+}
+
+
+/* Tree Glow */
+
+.treeGlow{
+
+position:absolute;
+
+width:400px;
+
+height:400px;
+
+background:
+
+radial-gradient(circle,
+
+rgba(255,45,117,.35),
+
+transparent 70%);
+
+filter:blur(40px);
+
+z-index:-1;
+
+}
+
+
+@keyframes treeGlow{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.08);
+
+}
+
+}
+
+
+/* Fireflies */
+
+.fireflies span{
+
+position:absolute;
+
+width:8px;
+
+height:8px;
+
+background:#fff;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 20px #fff;
+
+animation:fly 5s infinite;
+
+}
+
+
+.fireflies span:nth-child(1){
+
+top:30%;
+
+left:20%;
+
+}
+
+.fireflies span:nth-child(2){
+
+top:50%;
+
+right:25%;
+
+}
+
+.fireflies span:nth-child(3){
+
+top:20%;
+
+right:40%;
+
+}
+
+.fireflies span:nth-child(4){
+
+bottom:30%;
+
+left:35%;
+
+}
+
+.fireflies span:nth-child(5){
+
+bottom:20%;
+
+right:30%;
+
+}
+
+.fireflies span:nth-child(6){
+
+top:60%;
+
+left:15%;
+
+}
+
+
+@keyframes fly{
+
+50%{
+
+transform:translateY(-40px);
+
+opacity:.4;
+
+}
+
+}
+
+
+/* Message */
+
+.treeMessage{
+
+position:absolute;
+
+bottom:8%;
+
+text-align:center;
+
+z-index:10;
+
+}
+
+
+.treeMessage h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:55px;
+
+text-shadow:
+
+0 0 20px #ff2d75;
+
+}
+
+
+.treeMessage p{
+
+margin-top:10px;
+
+}
+
+
+#treeNextBtn{
+
+margin-top:25px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:50px;
+
+background:
+
+linear-gradient(45deg,#ff2d75,#ff8ab8);
+
+color:white;
+
+font-size:17px;
+
+font-weight:bold;
+
+box-shadow:
+
+0 0 25px #ff2d75;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.loveTree{
+
+transform:scale(.75);
+
+}
+
+.treeMoon{
+
+font-size:60px;
+
+}
+
+.treeMessage h1{
+
+font-size:38px;
+
+}
+
+}

@@ -171,3 +171,88 @@ startTransition();
 });
 
 }
+
+
+
+/* ==========================================
+   PART 4.3
+   Love World Interaction
+========================================== */
+
+
+const nextLoveBtn = document.getElementById("nextLoveBtn");
+
+const loveArrow = document.querySelector(".loveArrow");
+
+
+/* Arrow Extra Movement */
+
+if(loveArrow){
+
+setInterval(()=>{
+
+loveArrow.style.transform =
+"translateX(25px) scale(1.1)";
+
+
+setTimeout(()=>{
+
+loveArrow.style.transform =
+"translateX(-25px) scale(1)";
+
+},800);
+
+
+},1800);
+
+}
+
+
+
+/* Continue Button */
+
+if(nextLoveBtn){
+
+nextLoveBtn.addEventListener("click",()=>{
+
+
+nextLoveBtn.style.transform="scale(.9)";
+
+
+setTimeout(()=>{
+
+nextLoveBtn.style.transform="scale(1)";
+
+
+},300);
+
+
+
+/* Move To Next Page */
+
+const page2=document.getElementById("page2");
+
+const page3=document.getElementById("page3");
+
+
+if(page2 && page3){
+
+
+page2.classList.remove("active");
+
+
+setTimeout(()=>{
+
+page3.classList.add("active");
+
+
+},800);
+
+
+}
+
+
+
+});
+
+}

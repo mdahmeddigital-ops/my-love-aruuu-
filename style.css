@@ -178,3 +178,239 @@ transform:scale(1);
 }
 
 }
+
+
+
+
+/* ===========================================
+   PART 2.2
+   Premium Background
+=========================================== */
+
+:root{
+
+--pink:#ff2d75;
+--lightPink:#ff6ba6;
+--dark:#06020d;
+--white:#ffffff;
+--glass:rgba(255,255,255,.08);
+
+}
+
+/* Animated Background */
+
+.bg-glow{
+
+position:absolute;
+
+width:700px;
+
+height:700px;
+
+background:radial-gradient(circle,
+rgba(255,0,120,.35),
+transparent 70%);
+
+filter:blur(80px);
+
+top:-180px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+animation:bgMove 8s ease-in-out infinite alternate;
+
+z-index:0;
+
+}
+
+@keyframes bgMove{
+
+from{
+
+transform:translateX(-50%) scale(1);
+
+}
+
+to{
+
+transform:translateX(-50%) scale(1.25);
+
+}
+
+}
+
+/* Stars */
+
+.stars{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background-image:
+
+radial-gradient(#fff 1px, transparent 1px);
+
+background-size:45px 45px;
+
+opacity:.15;
+
+animation:starsMove 60s linear infinite;
+
+}
+
+@keyframes starsMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-400px);
+
+}
+
+}
+
+/* Particles */
+
+.particles{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+/* Welcome Box */
+
+.welcome-box{
+
+position:relative;
+
+z-index:10;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+text-align:center;
+
+padding:25px;
+
+}
+
+/* Title */
+
+.love-title{
+
+font-family:'Great Vibes',cursive;
+
+font-size:55px;
+
+color:white;
+
+text-shadow:
+
+0 0 15px hotpink,
+
+0 0 40px deeppink;
+
+}
+
+/* Aruuu */
+
+.aruuu{
+
+font-size:70px;
+
+margin-top:10px;
+
+font-weight:700;
+
+color:#fff;
+
+text-shadow:
+
+0 0 15px #ff2d75,
+
+0 0 50px #ff2d75;
+
+}
+
+/* Description */
+
+.love-desc{
+
+margin-top:20px;
+
+font-size:18px;
+
+opacity:.9;
+
+max-width:320px;
+
+}
+
+/* Premium Button */
+
+#startBtn{
+
+margin-top:35px;
+
+padding:18px 42px;
+
+border:none;
+
+border-radius:50px;
+
+background:
+
+linear-gradient(45deg,#ff2d75,#ff6ba6);
+
+color:white;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:
+
+0 0 25px rgba(255,50,120,.5);
+
+}
+
+#startBtn:hover{
+
+transform:scale(1.08);
+
+box-shadow:
+
+0 0 50px hotpink;
+
+}
+
+#startBtn:active{
+
+transform:scale(.95);
+
+}

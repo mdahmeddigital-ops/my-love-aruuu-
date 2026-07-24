@@ -93,3 +93,81 @@ p.classList.add("explode");
 });
 
 }
+
+
+
+
+/* ==========================================
+   PART 3.1
+   Flash + Cinematic Transition
+========================================== */
+
+const whiteFlash = document.getElementById("whiteFlash");
+
+const screenFade = document.getElementById("screenFade");
+
+const transitionScreen = document.getElementById("transitionScreen");
+
+
+function startTransition(){
+
+/* White Flash */
+
+if(whiteFlash){
+
+whiteFlash.style.opacity="1";
+
+setTimeout(()=>{
+
+whiteFlash.style.opacity="0";
+
+},500);
+
+}
+
+
+/* Dark Fade */
+
+setTimeout(()=>{
+
+if(screenFade){
+
+screenFade.style.opacity="1";
+
+}
+
+},600);
+
+
+/* Enter Love World */
+
+setTimeout(()=>{
+
+if(transitionScreen){
+
+transitionScreen.style.opacity="1";
+
+transitionScreen.style.visibility="visible";
+
+}
+
+},1200);
+
+}
+
+
+/* Connect With Heart Click */
+
+if(touchBtn){
+
+touchBtn.addEventListener("click",()=>{
+
+setTimeout(()=>{
+
+startTransition();
+
+},1800);
+
+});
+
+}
